@@ -1,11 +1,16 @@
 :root {
   font-family: 'Times New Roman', Times, serif;
-
-
+  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg-colour: #2C3A3A;
+  --primary-surface-clr: #F5F7F7;
+  --secondary-surface-clr: #E2E8E8;
+  --tertiary-surface-clr: #CBD5D5;
+
 }
 
 a {

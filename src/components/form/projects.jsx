@@ -1,7 +1,7 @@
 export function ProjectsForm({updateProjectsInfo}) {
     return (
         <div>
-            <h1>Hello this is personal field</h1>
+            <h3>Hello this is personal field</h3>
         </div>
     )
 }
