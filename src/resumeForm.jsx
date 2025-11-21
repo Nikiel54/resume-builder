@@ -34,15 +34,39 @@ export function Resumeform ({ data, setData }) {
         }))
     }
 
-    // function to update data stored via the work experience section
-    function updateExperienceInfo (field, value) {
-        setData((prev => {
+    function updateExperienceField(index, field, value) {
+        setData(prev => {
+            const updated = [...prev.Experience];
+
+            updated[index] = {
+            ...updated[index],
+            [field]: value,
+            };
+
             return {
-                ...prev,
-                Experience: [],
-            }
-        }))
+            ...prev,
+            Experience: updated,
+            };
+        });
     }
+    
+    // Add an empty Experience entry
+    function addExperience() {
+        setData(prev => ({
+            ...prev,
+            Experience: [
+            ...prev.Experience,
+            {
+                company: "",
+                position: "",
+                startDate: "",
+                endDate: "",
+                bullets: [],
+            }
+            ]
+        }));
+    }
+
 
     // function to update data stored via the personal projects section (optional)
     function updateProjectsInfo (field, value) {
@@ -60,11 +84,11 @@ export function Resumeform ({ data, setData }) {
     return (
         // User form structure
         <div id="resumeForm">
-            <h1 className="form-title">Enter your information below</h1>
+            <h1 className="page-section-title">Enter your information below</h1>
             <PersonalForm data={data} updatePersonalInfo={updatePersonalInfo}/>
-            <EducationForm updateEducationInfo={updateEducationInfo} />
-            <WorkHistoryForm updateExperienceInfo={updateExperienceInfo} />
-            <ProjectsForm updateProjectsInfo={updateProjectsInfo} />
+            <EducationForm data={data} updateEducationInfo={updateEducationInfo} />
+            <WorkHistoryForm data={data} updateExperienceField={updateExperienceField} addExperience={addExperience}/>
+            <ProjectsForm data={data} updateProjectsInfo={updateProjectsInfo} />
         </div>
     );
 }

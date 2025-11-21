@@ -7,10 +7,13 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bg-colour: #2C3A3A;
+  --preview-bg: #FFFFFF;
   --primary-surface-clr: #F5F7F7;
-  --secondary-surface-clr: #E2E8E8;
+  --secondary-surface-clr: #3E4E4E;
   --tertiary-surface-clr: #CBD5D5;
-
+  --input-dark-focus: #3BAFBF;
+  --dark-text: #1A1A1A;
+  --light-text: #E8EEEE;
 }
 
 a {

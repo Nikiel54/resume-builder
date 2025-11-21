@@ -19,13 +19,13 @@ const initialResumeData = {
         graduationDate: "",
     },
     Experience: [
-        {
-          company: "",
-          position: "",
-          startDate: "",
-          endDate: "",
-          bullets: [],
-        }
+      {
+        company: "",
+        position: "",
+        startDate: "",
+        endDate: "",
+        bullets: [],
+      }
     ]
 }
 

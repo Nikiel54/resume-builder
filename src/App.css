@@ -1,7 +1,7 @@
 #root {
   display: flex;
   flex: 1 1 auto;
-  gap: 50px;
+  gap: 100px;
   justify-content: center;
   max-width: 1280px;
   margin: 0 auto;
@@ -10,19 +10,88 @@
 }
 
 #resumeForm {
-  flex: 1 1 auto;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
+}
+
+.page-section-title {
+  text-align: center;
 }
 
 
+.form-section {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 365px;
+  gap: 10px;
+}
 
+.form-section .form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
 
+.form-section header {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-row label {
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--light-text);
+}
+
+.form-section input {
+  background-color: var(--secondary-surface-clr);
+  border: 1px solid #506868;
+  border-radius: 3px;
+  padding: 3px;
+  padding-left: 5px;
+  color: var(--primary-surface-clr);
+  width: auto;
+}
+
+.form-section input:focus {
+  border: 1px solid var(--input-dark-focus);
+}
+
+.experience-item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+}
 
 
 
 #livePreview {
   flex: 1 1 auto;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-section {
+  background-color: var(--preview-bg);
+  height: 90vh;
+}
+
+.preview-section h2 {
+  color: black;
 }

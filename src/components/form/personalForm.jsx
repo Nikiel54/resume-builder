@@ -2,60 +2,90 @@
 
 export function PersonalForm({data, updatePersonalInfo}) {
 
-    function handleChange(event) {
+    function handleChangeInPersonal(event) {
         const { name, value } = event.target;
 
         updatePersonalInfo(name, value);
     }
 
     return (
-        <form id="personal-info-section">
-            <header>Enter personal information below</header>
-            <input 
-                type="text" 
-                onChange={handleChange} 
-                placeholder="First Name" 
-                name="firstName"
-                value={data.PersonalInfo.firstName}
-                required
-            />
-            <input 
-                type="text" 
-                onChange={handleChange} 
-                placeholder="Last Name" 
-                name="lastName"
-                value={data.PersonalInfo.lastName}
-                required
-            />
-            <input 
-                type="email" 
-                onChange={handleChange} 
-                placeholder="Enter your email" 
-                name="email"
-                value={data.PersonalInfo.email}
-                required 
-            />
-            <input 
-                type="tel" 
-                onChange={handleChange} 
-                placeholder="Enter your phone number" 
-                name="phone"
-                value={data.PersonalInfo.phone}
-            />
-            <input 
-                type="url" 
-                onChange={handleChange} 
-                placeholder="Enter your github"
-                name="github"
-                value={data.PersonalInfo.github}
-            />
-            <input 
-                type="url" 
-                onChange={handleChange} 
-                placeholder="Enter your personal website" 
-                name="otherWebsite"
-                value={data.PersonalInfo.otherWebsite}
-            />
+        <form className="form-section">
+            <header>Personal Information</header>
+            <div className="form-row">
+                <div>
+                    <label htmlFor="firstName">First Name:</label>
+                    <input
+                        type="text"
+                        onChange={handleChangeInPersonal}
+                        placeholder="First Name"
+                        name="firstName"
+                        id="firstName"
+                        value={data.PersonalInfo.firstName}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="lastName">Last Name:</label>
+                    <input
+                        type="text"
+                        onChange={handleChangeInPersonal}
+                        placeholder="Last Name"
+                        name="lastName"
+                        id="lastName"
+                        value={data.PersonalInfo.lastName}
+                        required
+                    />
+                </div>
+            </div>
+            <div className="form-row">
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        onChange={handleChangeInPersonal}
+                        placeholder="Email"
+                        name="email"
+                        id="email"
+                        value={data.PersonalInfo.email}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        onChange={handleChangeInPersonal}
+                        placeholder="Phone Number"
+                        name="phone"
+                        id="phone"
+                        value={data.PersonalInfo.phone}
+                    />
+                </div>
+            </div>
+            <div className="form-row">
+                <div>
+                    <label htmlFor="github">Link to Github:</label>
+                    <input
+                        type="url"
+                        onChange={handleChangeInPersonal}
+                        placeholder="Github (optional)"
+                        name="github"
+                        id="github"
+                        value={data.PersonalInfo.github}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="otherWebsite">Other Websites:</label>
+                    <input
+                        type="url"
+                        onChange={handleChangeInPersonal}
+                        placeholder="Other Websites (optional)"
+                        name="otherWebsite"
+                        id="otherWebsite"
+                        value={data.PersonalInfo.otherWebsite}
+                    />
+                </div>
+            </div>
         </form>
     )
 }
