@@ -7,6 +7,15 @@ export function WorkExperienceItem({experience, index, updateExperienceField }) 
         updateExperienceField(index, name, value);
     }
 
+    function handleChangeInBullets(event) {
+        const { name, value } = event.target;
+
+        const lines = value
+            .split("\n")
+
+        updateExperienceField(index, name, lines);
+    }
+
     return (
         <div className="experience-item">
             <div className="form-row">
@@ -54,6 +63,16 @@ export function WorkExperienceItem({experience, index, updateExperienceField }) 
                         />
                     </label>
                 </div>
+            </div>
+            <div className="form-row">
+                <label> Bullets:
+                    <textarea
+                        name="bullets"
+                        placeholder="Enter each bullet on a new line"
+                        value={experience.bullets.join("\n")}
+                        onChange={handleChangeInBullets}
+                    ></textarea>
+                </label>
             </div>
         </div>
     )

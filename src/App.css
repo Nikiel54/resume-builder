@@ -79,6 +79,7 @@
 .experience-item {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 /* Styling for the preview section */
@@ -127,8 +128,9 @@
 .item-header {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 14px;
+  gap: 2px;
+  font-size: 13px;
+  margin-bottom: 5px;
 }
 
 .item-header > div {
@@ -139,4 +141,32 @@
 
 .item-header > em {
   font-size: 13px;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: var(--separation-margin);
+}
+
+.experience-bullet {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.icon {
+  width: 8px;
+  height: 8px;
+}
+
+textarea {
+  min-height: 30px;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #506868;
+  background: var(--secondary-surface-clr);
 }
