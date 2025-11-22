@@ -18,6 +18,7 @@
 
 .page-section-title {
   text-align: center;
+  color: var(--header-text);
 }
 
 
@@ -89,9 +90,23 @@
 
 .preview-section {
   background-color: var(--preview-bg);
-  height: 90vh;
+  height: 500px;
+  color: var(--dark-text);
+  margin-bottom: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  overflow-y: auto;
+  border-radius: 5px;
+  padding: 2rem;
+
+  --separation-margin: 8px;
 }
 
-.preview-section h2 {
-  color: black;
+#header-preview-section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+  margin-bottom: var(--separation-margin);
+  text-align: center;
+  gap: 5px;
 }

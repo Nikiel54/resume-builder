@@ -39,26 +39,27 @@ export function PersonalForm({data, updatePersonalInfo}) {
             </div>
             <div className="form-row">
                 <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        onChange={handleChangeInPersonal}
-                        placeholder="Email"
-                        name="email"
-                        id="email"
-                        value={data.PersonalInfo.email}
-                        required
-                    />
-                </div>
-                <div>
                     <label htmlFor="phone">Phone Number:</label>
                     <input
                         type="tel"
                         onChange={handleChangeInPersonal}
-                        placeholder="Phone Number"
+                        placeholder="e.g. xxx-xxx-xxxx"
                         name="phone"
                         id="phone"
+                        maxLength={10}
                         value={data.PersonalInfo.phone}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        onChange={handleChangeInPersonal}
+                        placeholder="e.g. johndoe@gmail.com"
+                        name="email"
+                        id="email"
+                        value={data.PersonalInfo.email}
+                        required
                     />
                 </div>
             </div>
