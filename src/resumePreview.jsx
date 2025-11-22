@@ -1,5 +1,6 @@
 import { EducationPreviewSection } from "./components/preview/educationSection";
 import { PreviewHeader } from "./components/preview/previewHeader";
+import { parseISO, format } from "date-fns";
 
 
 export function Resumepreview ({ data }) {
@@ -13,4 +14,11 @@ export function Resumepreview ({ data }) {
             </div>
         </div>
     )
+}
+
+export function formatDate(date) {
+    const isoDate = parseISO(date); // get new date object
+    const formatDate = format(isoDate, "MMM. d");
+
+    return formatDate;
 }

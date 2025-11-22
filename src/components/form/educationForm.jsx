@@ -8,6 +8,18 @@ export function EducationForm({data, updateEducationInfo}) {
         updateEducationInfo(name, value);
     }
 
+
+    // Helper function to control gpa inputs, which then calls 
+    //   the update value function updateEducationInfo.
+    function handleGpaChange(e) {
+        let value = e.target.value;
+
+        // Allow only: digits, one decimal point, max 2 decimals.
+        if (/^\d{0,1}(\.\d{0,2})?$/.test(value)) {
+            updateEducationInfo("gpa", value);
+        }
+    }
+
     return (
         <form id="personal-info-section" className="form-section">
             <header>Education below</header>
@@ -39,15 +51,26 @@ export function EducationForm({data, updateEducationInfo}) {
             </div>
             <div className="form-row">
                 <div>
-                    <label htmlFor="graduationDate">Expected graduation:</label>
+                    <label htmlFor="gpa">GPA:</label>
+                    <input
+                        type="text"
+                        name="gpa"
+                        id="gpa"
+                        inputMode="decimal"
+                        value={data.Education.gpa}
+                        onChange={handleGpaChange}
+                        placeholder="e.g., 4.00"
+                    />
+                </div>
+                <div>
+                    <label htmlFor="enrollmentDate">Enrollment date:</label>
                     <input
                         type="date"
                         onChange={handleChangeInEducation}
-                        placeholder="Graduation Date"
-                        name="graduationDate"
-                        id="graduationDate"
-                        value={data.Education.graduationDate}
-                        required
+                        placeholder="Enrollment date"
+                        name="enrollmentDate"
+                        id="enrollmentDate"
+                        value={data.Education.enrollmentDate}
                     />
                 </div>
             </div>

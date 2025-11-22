@@ -16,7 +16,8 @@ const initialResumeData = {
     Education: {
         school: "",
         major: "",
-        graduationDate: "",
+        gpa: "",
+        enrollmentDate: "",
     },
     Experience: [
       {

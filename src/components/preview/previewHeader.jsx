@@ -17,11 +17,11 @@ export function PreviewHeader({ data }) {
 
     return (
         <div id="header-preview-section">
-            <h2 className="user-title">
+            <h1 className="user-title">
                 <ResumeTitleName text={firstName}/>
                 {" "}
                 <ResumeTitleName text={lastName}/>
-            </h2>
+            </h1>
             <p className="user-additional-info">
                 {contactInfo.join(" | ")}
             </p>

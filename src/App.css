@@ -10,7 +10,7 @@
 }
 
 #resumeForm {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -31,8 +31,10 @@
 }
 
 .form-section .form-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: left;
   gap: 20px;
 }
 
@@ -79,7 +81,7 @@
   flex-direction: column;
 }
 
-
+/* Styling for the preview section */
 
 #livePreview {
   flex: 1 1 auto;
@@ -109,4 +111,32 @@
   margin-bottom: var(--separation-margin);
   text-align: center;
   gap: 5px;
+}
+
+.user-title {
+  font-size: 24px;
+}
+
+.resume-section-header {
+  font-size: 12px;
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+  margin-bottom: var(--separation-margin);
+}
+
+.item-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.item-header > div {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.item-header > em {
+  font-size: 13px;
 }
