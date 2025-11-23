@@ -5,6 +5,15 @@ Create, edit, and preview a professional technical resume in real time — direc
 🔗 **Live Demo:** https://readyresumes.netlify.app/
 
 ---
+## 🧰 Tech Stack
+
+- **React.js**
+- **Vite.js**
+- **CSS (Custom styling)**
+- **date-fns** for date formatting
+- **Netlify** for deployment
+
+---
 
 ## 🚀 Features
 
@@ -16,15 +25,5 @@ Create, edit, and preview a professional technical resume in real time — direc
 - Add or remove experience entries.
 - Expand/collapse experience items for better page organization.
 - Conforms to webaccessibility standards.
-
----
-
-## 🧰 Tech Stack
-
-- **React.js**
-- **Vite.js**
-- **CSS (Custom styling)**
-- **date-fns** for date formatting
-- **Netlify** for deployment
 
 ---
