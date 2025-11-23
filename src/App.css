@@ -173,13 +173,18 @@ textarea {
   font-size: 24px;
 }
 
+.user-additional-info {
+  font-size: 18px;
+}
+
 .resume-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .resume-section-header {
-  font-size: 12px;
+  font-size: 16px;
   border-bottom: 1px solid black;
   padding-bottom: 3px;
   margin-bottom: var(--separation-margin);
@@ -189,7 +194,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
@@ -200,7 +205,7 @@ textarea {
 }
 
 .item-header > em {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .experience-item {
@@ -215,7 +220,7 @@ textarea {
   align-items: center;
   gap: 15px;
   padding-left: 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .icon {

@@ -1,10 +1,9 @@
 // This document entails the component structure for the 
 // user facing form to input data for your resume preview.
 
-import { PersonalForm } from "./components/form/PersonalForm";
+import { PersonalForm } from "./components/form/personalForm";
 import { EducationForm } from "./components/form/educationForm";
 import { WorkHistoryForm } from "./components/form/workHistoryform";
-import { ProjectsForm } from "./components/form/projects";
 
 // Main form component
 export function Resumeform ({ data, setData }) {
@@ -71,20 +70,6 @@ export function Resumeform ({ data, setData }) {
         setData(prev => ({
             ...prev,
             Experience: prev.Experience.filter((_, i) => i !== index)
-        }))
-    }
-
-
-    // function to update data stored via the personal projects section (optional)
-    function updateProjectsInfo (field, value) {
-        setData((prev => {
-            return {
-                ...prev,
-                Projects: {
-                    ...prev.Projects,
-                    [field]: value,
-                }
-            }
         }))
     }
 
