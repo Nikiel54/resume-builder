@@ -64,7 +64,14 @@ export function Resumeform ({ data, setData }) {
                 bullets: [],
             }
             ]
-        }));
+        }))
+    }
+
+    function removeExperience(index) {
+        setData(prev => ({
+            ...prev,
+            Experience: prev.Experience.filter((_, i) => i !== index)
+        }))
     }
 
 
@@ -84,11 +91,11 @@ export function Resumeform ({ data, setData }) {
     return (
         // User form structure
         <div id="resumeForm">
-            <h1 className="page-section-title">Enter your information below</h1>
+            <h1 className="page-section-title">Fill out information</h1>
             <PersonalForm data={data} updatePersonalInfo={updatePersonalInfo}/>
             <EducationForm data={data} updateEducationInfo={updateEducationInfo} />
-            <WorkHistoryForm data={data} updateExperienceField={updateExperienceField} addExperience={addExperience}/>
-            <ProjectsForm data={data} updateProjectsInfo={updateProjectsInfo} />
+            <WorkHistoryForm data={data} updateExperienceField={updateExperienceField} 
+                addExperience={addExperience} removeExperience={removeExperience}/>
         </div>
     );
 }

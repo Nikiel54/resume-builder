@@ -8,7 +8,7 @@ export function Resumepreview ({ data }) {
 
     return (
         <div id="livePreview">
-            <h1 className="page-section-title">Resume Preview</h1>
+            <h1 className="page-section-title">Live Preview</h1>
             <div className="preview-section">
                 <PreviewHeader data={data} />
                 <EducationPreviewSection data={data} />

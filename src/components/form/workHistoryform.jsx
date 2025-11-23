@@ -1,6 +1,6 @@
 import { WorkExperienceItem } from "./experienceCard"
 
-export function WorkHistoryForm({data, updateExperienceField, addExperience}) {
+export function WorkHistoryForm({ data, updateExperienceField, addExperience, removeExperience }) {
 
     return (
         <div id="experience-section" className="form-section">
@@ -11,6 +11,7 @@ export function WorkHistoryForm({data, updateExperienceField, addExperience}) {
                         key={index}
                         experience={exp}
                         updateExperienceField={updateExperienceField}
+                        removeExperienceField={removeExperience}
                         index={index}
                     />
                 ))}

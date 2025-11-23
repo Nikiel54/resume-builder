@@ -1,12 +1,31 @@
 #root {
   display: flex;
+  flex-direction: column;
   flex: 1 1 auto;
-  gap: 100px;
+  gap: 20px;
   justify-content: center;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   background-color: var(--bg-colour);
+}
+
+#root > header {
+  text-align: center;
+  border-bottom: 2px solid #1a2530;
+  color: #E8EEEE;
+  padding: 1.25rem 2rem;
+}
+
+#root > header > h1 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+#root > div {
+  display: flex;
+  gap: 50px;
 }
 
 #resumeForm {
@@ -23,7 +42,7 @@
 
 
 .form-section {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   width: 365px;
@@ -73,13 +92,45 @@
 .experience-item-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.experience-header button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: #1e282d;
 }
 
 .experience-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.remove-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--light-text);
+  padding: 2px;
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 30px;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #506868;
+  background: var(--secondary-surface-clr);
 }
 
 /* Styling for the preview section */
@@ -92,8 +143,12 @@
 }
 
 .preview-section {
+  display: flex;
+  flex-direction: column;
   background-color: var(--preview-bg);
-  height: 500px;
+  width: 8.5in;     /* US letter width for pdf exports */
+  max-width: 8.5in;
+  min-height: 11in; /* US letter height for pdf exports */
   color: var(--dark-text);
   margin-bottom: 40px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
@@ -116,6 +171,11 @@
 
 .user-title {
   font-size: 24px;
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
 }
 
 .resume-section-header {
@@ -163,10 +223,30 @@
   height: 8px;
 }
 
-textarea {
-  min-height: 30px;
-  padding: 0.75rem;
-  border-radius: 6px;
-  border: 1px solid #506868;
-  background: var(--secondary-surface-clr);
+
+@media (max-width: 768px) {
+  .preview-section {
+    transform: scale(0.5);     /* shrink to fit */
+    transform-origin: top center;
+    width: 8.5in;
+    min-width: 6in;
+  }
+
+  #root > div {
+    flex-direction: column;
+  }
+
+  .form-section {
+    flex: 1 1 auto;
+    min-width: 365px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .preview-section {
+    transform: scale(0.75);     /* shrink to fit */
+    transform-origin: top center;
+    width: 8.5in;              
+    min-height: 9in;
+  }
 }

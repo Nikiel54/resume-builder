@@ -6,8 +6,8 @@ import { Resumepreview } from './resumePreview';
 // JSON document to be sent to the preview component for rendering
 const initialResumeData = {
     PersonalInfo: {
-        firstName: "",
-        lastName: "",
+        firstName: "John",
+        lastName: "Doe",
         email: "",
         phone: "",
         github: "",
@@ -35,8 +35,13 @@ function App() {
 
   return (
     <>
-      <Resumeform data={data} setData={setData} />
-      <Resumepreview data={data} />
+      <header>
+        <h1>Ready Resumes</h1>
+      </header>
+      <div>
+        <Resumeform data={data} setData={setData} />
+        <Resumepreview data={data} />
+      </div>
     </>
   )
 }
